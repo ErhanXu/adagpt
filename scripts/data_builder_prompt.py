@@ -12,7 +12,7 @@ import custom_datasets
 from model import load_tokenizer, load_model
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["TORCH_COMPILE_DISABLE"] = "1"
-torch._dynamo.config.disable = True
+torch._dynamo.config.disable = False
 
 def set_seed(seed):
     torch.manual_seed(seed)
